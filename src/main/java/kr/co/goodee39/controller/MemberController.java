@@ -1,8 +1,10 @@
 package kr.co.goodee39.controller;
 
+import java.io.IOException;
 import java.net.http.HttpRequest;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,10 +36,7 @@ public class MemberController {
 	 return "membermypage";
 		
 	}
-	@GetMapping("/main")
-	public String gohome(MemberVO vo) {
-		return "main";
-	}
+	
 	@GetMapping("/signup")
 	public String signup(MemberVO vo) {
 		return "signup";
@@ -47,8 +46,8 @@ public class MemberController {
 		return "login";
 	}
 	@PostMapping("/login")
-	public String isLogin(MemberVO vo, HttpSession session) {
-		return memberService.getMember(vo, session);
+	public String isLogin(MemberVO vo, HttpSession session, HttpServletResponse response) throws IOException {
+		return memberService.getMember(vo, session, response);
 	}
 	@PostMapping("/signupResult")
 	public String signupResult(MemberVO vo) {

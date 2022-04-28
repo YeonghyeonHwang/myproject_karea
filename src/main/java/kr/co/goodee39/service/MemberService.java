@@ -1,5 +1,9 @@
 package kr.co.goodee39.service;
 
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.mybatis.spring.SqlSessionTemplate;
@@ -14,14 +18,20 @@ public class MemberService {
 	@Autowired
 	SqlSessionTemplate sqlSessionTemplate;
 	
-	public String getMember(MemberVO vo, HttpSession session) {
+	public String getMember(MemberVO vo, HttpSession session, HttpServletResponse response) throws IOException {
 		MemberVO vo1 = sqlSessionTemplate.selectOne("member.selectMember",vo);
 		String path = "";
 		if(vo1 != null) {
 			session.setAttribute("account", vo1);
 			path = "membermypage";
 		}else {
-			path = "redirect:login";
+			response.setContentType("text/html; charset=UTF-8"); 
+			PrintWriter out = response.getWriter(); 
+			out.println("<script language='javascript'>");
+					out.println("alert('회원정보가 일치하지 않습니다.')");
+					out.println("</script>");	 
+			out.flush();
+			path = "login";
 		}
 		return path;
 	}

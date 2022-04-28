@@ -5,5 +5,9 @@
 	<typeAliases>
 		<!-- <typeAlias type="kr.co.goodee39.vo.BBSVO" alias="bbsVO"/> -->
 		<typeAlias type="kr.co.goodee39.vo.MemberVO" alias="memberVO"/>
+		<typeAlias type="kr.co.goodee39.vo.CarInfoVO" alias="carInfoVO"/>
+		<typeAlias type="kr.co.goodee39.vo.DrivingTypeVO" alias="drivingVO"/>
+		<typeAlias type="kr.co.goodee39.vo.EngineTypeVO" alias="engineVO"/>
+		<typeAlias type="kr.co.goodee39.vo.ExColorTypeVO" alias="excolorVO"/>
 	</typeAliases>
 </configuration>

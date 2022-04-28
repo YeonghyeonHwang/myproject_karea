@@ -11,11 +11,7 @@ $(function () {
             $('#main2').YTPStop();
         }
     });
-    $("#customerservice").click(function(){
-     $("#menuslide").slideToggle();
-     $("#boxshadow").toggle();
-     $("#customerservice").toggleClass('customercolor');
-    });
+    
     let kiaVal = 1;
     let genVal = 3;
     let hynVal = 5;
@@ -348,15 +344,16 @@ slider.find("li").css({"z-index":0});
             $("#sLeft").hide();
 
         } else if (position == 2) {
-            x = -84.7;
+            x = -1280;
 
         } else if (position == 3) {
-            x = -169.4;
+            x = -2560;
         } else if (position == 4) {
-            x = -254.1;
+            x = -3840;
 
         }
-        $("#selectSlide").children().css({ "transform": "translateX(" + x + "vw)" });
+        $("#selectSlide").children().css({ "transform": "translateX(" + x + "px)" });
+        $("#selectSlide").children().css({ "transition": ".5s" });
         $("input:radio[name='Page3slide']:radio[value='" + y + "']").prop('checked', true);
         position--;
         visibleLength = $(".all:visible").length;
@@ -371,21 +368,22 @@ slider.find("li").css({"z-index":0});
         let y = ++checkval;
         $("#sLeft").show();
         if (position == 0) {
-            x = -84.7
+            x = -1280;
         }
         else if (position == 1) {
-            x = -169.4;
+            x = -2560;
         } else if (position == 2) {
-            x = -254.1;
+            x = -3840;
         } else if (position == 3) {
-            x = -338.8
+            x = -5120;
         }
-        $("#selectSlide").children().css({ "transform": "translateX(" + x + "vw)" });
+        $("#selectSlide").children().css({ "transform": "translateX(" + x + "px)" });
         $("input:radio[name='Page3slide']:radio[value='" + y + "']").prop('checked', true);
         position++;
         visibleLength = $(".all:visible").length;
         lastpage = Math.ceil(visibleLength / 4);
         lastcheck(lastpage);
+        
 
     });
 

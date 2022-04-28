@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="carInfo">
+  
+  <select id="selectCarList" parameterType="carInfoVO" resultType="carInfoVO">
+    select * from carinfo where brand=#{brand}
+  </select>
+  <select id="selectOriginalPrice" parameterType="carInfoVO" resultType="int">
+    select originalprice from carinfo where cname=#{cname}
+  </select>
+  
+  </mapper>
