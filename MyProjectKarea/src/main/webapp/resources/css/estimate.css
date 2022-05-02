@@ -1,0 +1,154 @@
+@charset "UTF-8";
+main{
+	margin-top:76px;
+	display:flex;
+	height:100vh;
+	overflow: scroll;
+    
+}
+header{
+	border-bottom:1px solid #808080;
+}
+input{
+	display:none;
+}
+label{
+	cursor:pointer;
+}
+#section1{
+	width:90%;
+	transform:translateX(-15%);
+	height:80vh;
+	position:fixed;
+	
+}
+#section2{
+	
+	width:30%;
+	padding-left:70%;
+    height:180vh; 
+	z-index:1;
+	
+}
+#section2Wrap{
+	border-left:1px solid #808080;
+	height:180vh;
+	padding:40px 15px 30px 40px;
+	
+}
+.brandName{
+	color:#A67D65;
+	
+}
+.checkImg{
+	width:150px;
+}
+
+#exColorListUl>li{
+	position:absolute;
+	
+}
+#exColorListUl>li>img{
+	width:100%;
+	
+}
+#imgComment{
+	margin-top:50%;
+	text-align:center;
+}
+.colorType{
+	opacity:0;
+}
+.colorActive{
+	opacity:1;
+	transition:.5s;
+}
+.colorDiv{
+	width:60px;
+	height:60px;
+	box-sizing:border-box;
+  
+   /*  background-clip: content-box; */
+	
+}
+.exColorUl{
+	display:flex;
+	width:80%;
+	flex-wrap:wrap;
+	 margin-bottom:15px; 
+	
+}
+.flexDiv{
+	display:flex;
+    justify-content:space-between;
+    position:relative;
+    margin:20px 0;
+}
+.typeTitle{
+	margin:20px 0 0 0;
+	color:#CCCCCC;
+}
+.exColorLi{
+	margin:0 3px 3px 0;
+	/* flex:auto; */
+}
+.colorChecked{
+	border:3px solid #A67D65 ;
+	background-clip:content-box;
+	padding:2px;
+}
+.colorTitle{
+	margin:30px 0;
+}
+#section3>div{
+	width:100%;
+	padding:30px;
+}
+.fontColor80{
+	color:#808080;
+}
+#totalPrice{
+	font-size:1.8rem;
+}
+#viewQuotation{
+	width:400px;
+	height:50px;
+	margin:10px auto 0 auto;
+	font-size:22px;
+	font-weight:bold;
+	border:2px solid gray;
+	border-radius:70px;
+	cursor:pointer;
+}
+#section3{
+	width:100%;
+	height:20vh;
+	background-color:#111111;
+	position:fixed;
+	bottom:0;
+	border-top:1px solid #808080;
+	border-left:1px solid #808080;
+	
+	
+}
+.typeLi::after{
+	content:'';
+    display:inline-block;
+	width:100%;
+	height:1px;
+	background-color:#808080;
+}
+.checked::after{
+	content:'';
+    display:inline-block;
+	width:100%;
+	height:1px;
+	background-color:#A67D65;
+	
+} 
+.typeInfoDiv{
+	line-height: 40px;
+}
+.noChecked{
+	filter: brightness(50%);
+}

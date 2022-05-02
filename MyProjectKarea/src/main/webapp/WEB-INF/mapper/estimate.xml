@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="estimate">
+  <select id="selectDrivingTypeList" parameterType="drivingVO" resultType="drivingVO">
+    select * from drivingtype where cname=#{cname}
+  </select>
+  <select id="selectEngineTypeList" parameterType="engineVO" resultType="engineVO">
+    select * from enginetype where cname=#{cname}
+  </select>
+  <select id="selectExColorTypeList" parameterType="excolorVO" resultType="excolorVO">
+    select * from excolortype where cname=#{cname}
+  </select>
+ 
+  
+  </mapper>
